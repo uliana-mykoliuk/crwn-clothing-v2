@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export const CheckoutItemContainer = styled.div`
   width: 100%;
@@ -30,7 +31,7 @@ export const Quantity = styled(BaseSpan)`
 
 export const Arrow = styled.div`
   cursor: pointer;
-`;
+` as React.FC<React.HTMLAttributes<HTMLDivElement>>;
 
 export const Value = styled.span`
   margin: 0 10px;
@@ -39,4 +40,4 @@ export const Value = styled.span`
 export const RemoveButton = styled.div`
   padding-left: 12px;
   cursor: pointer;
-`;
+` as React.FC<React.HTMLAttributes<HTMLDivElement>>;

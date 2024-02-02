@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import React from "react";
+import styled, { StyledComponent } from "styled-components";
 
 type BackgroundImageProps = {
   imageUrl: string;
@@ -69,4 +70,4 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
-`;
+` as React.FC<React.HTMLAttributes<HTMLDivElement>>;

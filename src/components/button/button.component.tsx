@@ -5,6 +5,7 @@ import {
   GoogleSignInButton,
   InvertedButton,
 } from "./button.styles";
+import { StyledComponent } from "styled-components";
 
 export enum BUTTON_TYPE_CLASSES {
   base = "base",
@@ -12,7 +13,9 @@ export enum BUTTON_TYPE_CLASSES {
   inverted = "inverted",
 }
 
-const getButton = (buttonType = BUTTON_TYPE_CLASSES.base): typeof BaseButton =>
+type StyledButton = StyledComponent<"button", any>;
+
+const getButton = (buttonType = BUTTON_TYPE_CLASSES.base): StyledButton =>
   ({
     [BUTTON_TYPE_CLASSES.base]: BaseButton,
     [BUTTON_TYPE_CLASSES.google]: GoogleSignInButton,

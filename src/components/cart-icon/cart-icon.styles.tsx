@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export const CartIconContainer = styled.div`
   width: 45px;
@@ -13,7 +14,7 @@ export const CartIconContainer = styled.div`
     width: 24px;
     height: 24px;
   }
-`;
+` as React.FC<React.HTMLAttributes<HTMLDivElement>>;
 
 export const ItemCount = styled.span`
   position: absolute;
