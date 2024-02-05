@@ -9,22 +9,25 @@ import { persistor, store } from "./store/store";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 
 import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-import "./index.scss";
+import "./index.scss"
 
 const rootElement = document.getElementById("root");
 
 render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <Elements stripe={stripePromise}>
-            <App />
-          </Elements>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <BrowserRouter>
+            <Elements stripe={stripePromise}>
+              <App />
+            </Elements>
+          </BrowserRouter>
+        </PersistGate>
+      </Provider>
   </React.StrictMode>,
   rootElement
 );
+
+serviceWorkerRegistration.register();
