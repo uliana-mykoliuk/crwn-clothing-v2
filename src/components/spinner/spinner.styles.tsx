@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const SpinnerOverlay = styled.div`
@@ -6,7 +7,7 @@ export const SpinnerOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+` as React.FC<React.HTMLAttributes<HTMLDivElement>>;
 
 export const SpinnerContainer = styled.div`
   display: inline-block;
